@@ -1,4 +1,4 @@
-package optionalTask;
+package optionalTask.v1;
 
 public class Plane{
     private String name;
@@ -21,9 +21,5 @@ public class Plane{
 
     public String getName() {
         return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 }
