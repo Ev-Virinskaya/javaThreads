@@ -1,4 +1,4 @@
-package optionalTask.v1;
+package optionalTask.variant1;
 
 public class Plane{
     private String name;

@@ -1,4 +1,4 @@
-package optionalTask.v2;
+package optionalTask.variant2;
 
 import java.util.concurrent.Semaphore;
 

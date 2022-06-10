@@ -1,4 +1,7 @@
-package mainTask.parking.v2;
+package mainTask.parking.variant2;
+
+import mainTask.parking.variant2.model.Car;
+import mainTask.parking.variant2.model.Parking;
 
 import java.util.LinkedList;
 import java.util.List;

@@ -1,4 +1,4 @@
-package optionalTask.v1;
+package optionalTask.variant1;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,7 +6,7 @@ import java.util.List;
 public class Airport {
     public static final List<Plane> schedule = new ArrayList<>();
 
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InterruptedException {
         addPlanes();
         Line one = new Line("1");
         Line two = new Line("2");

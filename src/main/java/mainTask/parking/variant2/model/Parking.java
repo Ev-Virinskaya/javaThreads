@@ -1,18 +1,18 @@
-package mainTask.parking.v2;
+package mainTask.parking.variant2.model;
 
 import java.util.concurrent.Semaphore;
 
 public class Parking {
-    private boolean[] parkingPlaces;
+    private boolean[] isParkingPlacesFree;
     private Semaphore semaphore;
 
     public Parking(int parkingCapacity) {
-        this.parkingPlaces = new boolean[parkingCapacity];
+        this.isParkingPlacesFree = new boolean[parkingCapacity];
         this.semaphore = new Semaphore(parkingCapacity, true);
     }
 
-    public boolean[] getParkingPlaces() {
-        return parkingPlaces;
+    public boolean[] getIsParkingPlacesFree() {
+        return isParkingPlacesFree;
     }
 
     public Semaphore getSemaphore() {

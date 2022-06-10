@@ -1,4 +1,5 @@
-package mainTask.parking;
+package mainTask.parking.variant1;
+
 
 import java.util.concurrent.TimeUnit;
 
