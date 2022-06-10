@@ -3,7 +3,7 @@ package mainTask.parking.variant1;
 import java.util.concurrent.Semaphore;
 
 public class Parking {
-    protected static final boolean[] parkingPlaces = new boolean[5];
+    protected static final boolean[] isParkingPlaceFree = new boolean[5];
     protected static final Semaphore semaphore = new Semaphore(5,true);
 
 

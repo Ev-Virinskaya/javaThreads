@@ -16,10 +16,10 @@ public class Car implements Runnable {
         try {
             if (Parking.semaphore.tryAcquire(1, TimeUnit.SECONDS)) {
                 int parkingNumber = -1;
-                synchronized (Parking.parkingPlaces) {
-                    for (int i = 0; i < Parking.parkingPlaces.length; i++) {
-                        if (!Parking.parkingPlaces[i]) {
-                            Parking.parkingPlaces[i] = true;
+                synchronized (Parking.isParkingPlaceFree) {
+                    for (int i = 0; i < Parking.isParkingPlaceFree.length; i++) {
+                        if (!Parking.isParkingPlaceFree[i]) {
+                            Parking.isParkingPlaceFree[i] = true;
                             parkingNumber = i;
                             System.out.printf("Машина №%d припаркована на месте %d.\n", carId, i + 1);
                             break;
@@ -28,8 +28,8 @@ public class Car implements Runnable {
                 }
                 Thread.sleep((long) (Math.random() * 10000));
 
-                synchronized (Parking.parkingPlaces) {
-                    Parking.parkingPlaces[parkingNumber] = false;
+                synchronized (Parking.isParkingPlaceFree) {
+                    Parking.isParkingPlaceFree[parkingNumber] = false;
                 }
                 Parking.semaphore.release();
                 System.out.printf("Машина №%d уехала с парковки.\n", carId);
